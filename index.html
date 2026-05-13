@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mize — gestão de cozinha para hamburguerias artesanais e pizzarias gourmet. Ficha técnica, CMV automático e controle de lotes. 30 dias grátis, sem cartão." />
+  <meta name="robots" content="index, follow" />
+  <title>Mize — Gestão de cozinha para hamburguerias e pizzarias</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header>
+  <nav class="navbar" id="navbar" aria-label="Navegação principal">
+    <div class="container">
+      <a href="#inicio" class="nav-logo" aria-label="Mize — página inicial">
+        <span class="nav-logo-icon" aria-hidden="true">
+          <!-- Chef hat icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/>
+            <line x1="6" y1="17" x2="18" y2="17"/>
+          </svg>
+        </span>
+        Mize
+      </a>
+
+      <div class="nav-links" aria-label="Links de navegação">
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#precos">Preços</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <a href="https://mizeapp.up.railway.app/login" target="_blank" rel="noopener noreferrer"
+         class="btn btn-green btn-sm nav-cta">
+        Comece agora
+      </a>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile" role="navigation">
+    <button class="mobile-menu-close" id="closeMobileMenu" aria-label="Fechar menu">&times;</button>
+    <a href="#diferenciais" class="mobile-nav-link">Diferenciais</a>
+    <a href="#funcionalidades" class="mobile-nav-link">Funcionalidades</a>
+    <a href="#como-funciona" class="mobile-nav-link">Como funciona</a>
+    <a href="#precos" class="mobile-nav-link">Preços</a>
+    <a href="#faq" class="mobile-nav-link">FAQ</a>
+    <a href="https://mizeapp.up.railway.app/login" target="_blank" rel="noopener noreferrer"
+       class="btn btn-green btn-full">
+      Comece agora
+    </a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio" aria-labelledby="hero-heading">
+  <div class="hero-grid" aria-hidden="true"></div>
+
+  <div class="container">
+    <!-- Left: content -->
+    <div class="hero-content" data-aos="fade-right" data-aos-duration="700">
+      <div class="hero-badge" aria-label="Status: pré-lançamento com vagas limitadas">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        Pré-lançamento · vagas de fundador limitadas
+      </div>
+
+      <h1 id="hero-heading">
+        O sistema que mostra quanto cada prato dá de margem real,
+        <span class="text-highlight">sem planilha.</span>
+      </h1>
+
+      <p class="hero-sub">
+        Mize é a gestão de cozinha pensada para hamburguerias artesanais e
+        pizzarias gourmet de 5 a 15 funcionários. Ficha técnica, CMV automático,
+        controle de lotes — tudo no celular.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="https://mizeapp.up.railway.app/login" target="_blank" rel="noopener noreferrer"
+           class="btn btn-green btn-lg">
+          Quero testar 30 dias grátis
+        </a>
+        <a href="https://wa.me/5571999999999" target="_blank" rel="noopener noreferrer"
+           class="btn btn-ghost-white btn-lg">
+          <!-- WhatsApp icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+          </svg>
+          Falar com o Marcos no WhatsApp
+        </a>
+      </div>
+
+      <div class="trust-items">
+        <span class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Sem cartão
+        </span>
+        <span class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Implantação inclusa
+        </span>
+        <span class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Cancela em 1 clique
+        </span>
+      </div>
+    </div>
+
+    <!-- Right: mockup -->
+    <div class="hero-visual" data-aos="fade-left" data-aos-duration="700" data-aos-delay="150" aria-hidden="true">
+      <div class="mock-wrap">
+
+        <!-- Floating badges -->
+        <div class="mock-badge mock-badge-1">Ficha técnica criada em 4min ⚡</div>
+        <div class="mock-badge mock-badge-2">iFood comeu 28% da margem ⚠</div>
+
+        <!-- Laptop dashboard -->
+        <div class="mock-laptop">
+          <div class="mock-screen">
+            <!-- Header -->
+            <div class="dash-header">
+              <span class="dash-brand">Mize · Hoje</span>
+              <span class="dash-date">Quarta · 14h22</span>
+            </div>
+
+            <!-- KPIs -->
+            <div class="kpi-grid">
+              <div class="kpi-card">
+                <div class="kpi-label">Margem da semana</div>
+                <div class="kpi-value">R$&nbsp;18.420</div>
+                <div class="kpi-sub">▲ +12%</div>
+              </div>
+              <div class="kpi-card kpi-blue">
+                <div class="kpi-label">Pratos cadastrados</div>
+                <div class="kpi-value">23 fichas</div>
+                <div class="kpi-sub">Ficha técnica ativa</div>
+              </div>
+              <div class="kpi-card kpi-orange">
+                <div class="kpi-label">Sobra no turno</div>
+                <div class="kpi-value">R$&nbsp;312</div>
+                <div class="kpi-sub">▼ Verificar</div>
+              </div>
+              <div class="kpi-card kpi-purple">
+                <div class="kpi-label">Insumos críticos</div>
+                <div class="kpi-value">4 itens</div>
+                <div class="kpi-sub">→ Repor</div>
+              </div>
+            </div>
+
+            <!-- CMV chart -->
+            <div class="cmv-section">
+              <div class="cmv-title">CMV por canal · esta semana</div>
+              <div class="cmv-bars">
+                <div class="cmv-bar-row">
+                  <span class="cmv-bar-label">Salão</span>
+                  <div class="cmv-bar-track"><div class="cmv-bar-fill" style="width:32%"></div></div>
+                  <span class="cmv-bar-pct">32%</span>
+                </div>
+                <div class="cmv-bar-row">
+                  <span class="cmv-bar-label">iFood</span>
+                  <div class="cmv-bar-track"><div class="cmv-bar-fill bar-orange" style="width:41%"></div></div>
+                  <span class="cmv-bar-pct">41%</span>
+                </div>
+                <div class="cmv-bar-row">
+                  <span class="cmv-bar-label">WhatsApp</span>
+                  <div class="cmv-bar-track"><div class="cmv-bar-fill bar-blue" style="width:36%"></div></div>
+                  <span class="cmv-bar-pct">36%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mock-laptop-base"></div>
+        </div>
+
+        <!-- Mobile notification panel -->
+        <div class="mock-mobile">
+          <div class="mob-header">Push em tempo real</div>
+          <div class="mob-alert">
+            <div class="mob-dot d-red"></div>
+            <span>Validade próxima · 8 lotes</span>
+          </div>
+          <div class="mob-alert">
+            <div class="mob-dot d-orange"></div>
+            <span>Blend acabando · 2kg</span>
+          </div>
+          <div class="mob-alert">
+            <div class="mob-dot d-green"></div>
+            <span>X-Bacon agora dá 64% margem</span>
+          </div>
+          <div class="mob-bars">
+            <div class="mob-bar mb1"></div>
+            <div class="mob-bar mb2"></div>
+            <div class="mob-bar mb3"></div>
+            <div class="mob-bar mb4"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Wave divider -->
+  <div class="hero-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 80 L0 45 Q360 80 720 40 Q1080 0 1440 45 L1440 80 Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== NICHE STRIP ===== -->
+<section class="niche-strip" aria-label="Público-alvo do Mize">
+  <div class="container">
+    <p class="niche-label">Feito especialmente para</p>
+    <div class="niche-items">
+      <span class="niche-item">Hamburguerias artesanais</span>
+      <span class="niche-divider" aria-hidden="true"></span>
+      <span class="niche-item">Pizzarias gourmet</span>
+      <span class="niche-divider" aria-hidden="true"></span>
+      <span class="niche-item">Cozinhas autorais</span>
+      <span class="niche-divider" aria-hidden="true"></span>
+      <span class="niche-item">5 a 15 funcionários</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAIN AGITATION ===== -->
+<section class="pain-section" id="diferenciais" aria-labelledby="pain-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Diga a verdade</span>
+      <h2 class="section-title" id="pain-heading">
+        Se você não souber responder isso agora,
+        <span class="text-highlight">está perdendo dinheiro.</span>
+      </h2>
+    </div>
+
+    <div class="pain-grid">
+      <div class="pain-card" data-aos="fade-up" data-aos-delay="0">
+        Você sabe o CMV real do seu x-bacon hoje, com o queijo cheddar no preço atual?
+      </div>
+      <div class="pain-card" data-aos="fade-up" data-aos-delay="100">
+        Quanto sobrou na cozinha ontem? Em reais, não em quilos.
+      </div>
+      <div class="pain-card" data-aos="fade-up" data-aos-delay="200">
+        iFood, salão, WhatsApp — qual canal te dá mais margem por prato?
+      </div>
+      <div class="pain-card" data-aos="fade-up" data-aos-delay="300">
+        Quando o blend vai acabar? Antes ou depois de perguntar pro cozinheiro?
+      </div>
+    </div>
+
+    <p class="pain-closing" data-aos="fade-up">
+      "Se respondeu 'mais ou menos' em alguma delas, ali está sua margem evaporando."
+    </p>
+  </div>
+</section>
+
+<!-- ===== DIFFERENTIALS ===== -->
+<section class="differentials-section" aria-labelledby="diff-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Inteligência operacional</span>
+      <h2 class="section-title" id="diff-heading">
+        Não administre por intuição.
+        <span class="text-highlight">Use os números reais.</span>
+      </h2>
+    </div>
+
+    <div class="intel-cards">
+      <!-- Card 1 -->
+      <div class="intel-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="intel-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/>
+            <line x1="6" y1="17" x2="18" y2="17"/>
+          </svg>
+        </div>
+        <h3>Ficha técnica viva</h3>
+        <p>Cadastre cada receita uma vez. Quando o preço do queijo subir, o CMV do prato atualiza sozinho. Custo por porção em tempo real.</p>
+        <span class="intel-tag">Cálculo automático</span>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="intel-card ic-green" data-aos="fade-up" data-aos-delay="100">
+        <div class="intel-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"/>
+            <line x1="12" y1="20" x2="12" y2="4"/>
+            <line x1="6"  y1="20" x2="6"  y2="14"/>
+          </svg>
+        </div>
+        <h3>CMV por canal</h3>
+        <p>Salão, iFood e WhatsApp separados. Descubra qual canal te dá mais margem por prato e ajuste preço onde precisa.</p>
+        <span class="intel-tag">Visão multi-canal</span>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="intel-card ic-orange" data-aos="fade-up" data-aos-delay="200">
+        <div class="intel-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="16.5" y1="9.4"  x2="7.5"  y2="4.21"/>
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
+        </div>
+        <h3>Lotes e validade</h3>
+        <p>Cada entrada vira lote com data de validade. Push no celular 24h antes de vencer. Acabou perder produto na geladeira.</p>
+        <span class="intel-tag">FIFO automático</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="features-section" id="funcionalidades" aria-labelledby="feat-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Módulos principais</span>
+      <h2 class="section-title" id="feat-heading">
+        Tudo que sua cozinha precisa,
+        <span class="text-highlight">em um único app.</span>
+      </h2>
+    </div>
+
+    <!-- Feature 01 — Dashboard -->
+    <div class="feature-row" data-aos="fade-up">
+      <div class="feature-visual-wrap">
+        <div class="feature-screen" aria-hidden="true">
+          <div class="feat-screen-title">Dashboard · Hoje</div>
+          <div class="feat-alert">
+            <div class="feat-alert-ico fa-red">!</div>
+            <span>Validade próxima — queijo muçarela 500g vence em 1 dia</span>
+          </div>
+          <div class="feat-alert">
+            <div class="feat-alert-ico fa-orange">↓</div>
+            <span>Margem caindo — Combo X-Egg caiu de 58% para 51%</span>
+          </div>
+          <div class="feat-alert">
+            <div class="feat-alert-ico fa-blue">!</div>
+            <span>Estoque mínimo — blend bovino abaixo de 3kg</span>
+          </div>
+          <div class="feat-alert">
+            <div class="feat-alert-ico fa-green">✓</div>
+            <span>Fechamento do turno — quinta registrado com sobra de R$&nbsp;280</span>
+          </div>
+        </div>
+      </div>
+      <div class="feature-content">
+        <div class="feature-num">01 — Dashboard</div>
+        <h3>Visão da sua cozinha em uma tela</h3>
+        <p>Alertas de validade próxima, pratos com margem caindo, insumos abaixo do mínimo. Você gerencia por exceção: só aparece o que precisa de atenção.</p>
+        <div class="feature-checks">
+          <span class="feature-check">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Alertas de validade
+          </span>
+          <span class="feature-check">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Margem em tempo real
+          </span>
+          <span class="feature-check">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Estoque mínimo configurável
+          </span>
+          <span class="feature-check">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Status de fechamento por turno
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 02 — Fichas técnicas (reverse) -->
+    <div class="feature-row feat-reverse" data-aos="fade-up">
+      <div class="feature-visual-wrap">
+        <div class="feature-screen" aria-hidden="true">
+          <div class="feat-screen-title">X-Bacon — ficha técnica</div>
+          <div class="recipe-row"><span class="r-name">Pão Brioche</span><span class="r-qty">80 g</span><span class="r-cost">R$ 1,60</span></div>
+          <div class="recipe-row"><span class="r-name">Blend bovino</span><span class="r-qty">180 g</span><span class="r-cost">R$ 3,96</span></div>
+          <div class="recipe-row"><span class="r-name">Queijo cheddar</span><span class="r-qty">30 g</span><span class="r-cost">R$ 1,20</span></div>
+          <div class="recipe-row"><span class="r-name">Bacon fatiado</span><span class="r-qty">15 g</span><span class="r-cost">R$ 0,82</span></div>
+          <div class="recipe-row"><span class="r-name">Alface / tomate</span><span class="r-qty">20 g</span><span class="r-cost">R$ 0,30</span></div>
+          <div class="recipe-total-row">
+            <span class="rt-label">Custo total</span>
+            <span class="rt-val">R$ 8,40</span>
+          </div>
+          <span class="recipe-margin">Venda R$&nbsp;23,00 · Margem bruta 64%</span>
+        </div>
+      </div>
+      <div class="feature-content">
+        <div class="feature-num">02 — Fichas técnicas</div>
+        <h3>Custo real de cada prato, sempre atualizado</h3>
+        <p>Toda receita liga insumos a custo. Quando o preço de uma matéria-prima muda, o custo do prato muda junto. Margem real sempre atualizada — sem reabrir planilha.</p>
+        <div class="feature-checks">
+          <span class="feature-check">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Receita por prato
+          </span>
+          <span class="feature-check">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Custo automático ao atualizar insumo
+          </span>
+          <span class="feature-check">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Variações (combo, meia porção)
+          </span>
+          <span class="feature-check">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Alerta de margem mínima
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 03 — Estoque com lotes -->
+    <div class="feature-row" data-aos="fade-up">
+      <div class="feature-visual-wrap">
+        <div class="feature-screen" aria-hidden="true">
+          <div class="feat-screen-title">Estoque · controle por lote</div>
+          <div style="display:flex;gap:4px;font-size:0.5rem;color:#64748B;padding:0 0 6px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:4px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;">
+            <span style="flex:3">Insumo</span>
+            <span style="flex:2">Lote</span>
+            <span style="flex:2">Venc.</span>
+            <span style="flex:2">Restante</span>
+            <span style="flex:3">Status</span>
+          </div>
+          <div class="batch-row-item"><span class="br-name">Cheddar 1kg</span><span class="br-lote">Lote 042</span><span class="br-venc">14/05</span><span class="br-qty">320g</span><span class="br-warn">⚠ vence em 2 dias</span></div>
+          <div class="batch-row-item"><span class="br-name">Blend bov. 5kg</span><span class="br-lote">Lote 038</span><span class="br-venc">18/05</span><span class="br-qty">2,1kg</span><span class="br-warn" style="color:#10B981">✓ ok</span></div>
+          <div class="batch-row-item"><span class="br-name">Pão brioche</span><span class="br-lote">Lote 045</span><span class="br-venc">13/05</span><span class="br-qty">48un</span><span class="br-warn">⚠ vence amanhã</span></div>
+          <div class="batch-row-item"><span class="br-name">Bacon fatiado</span><span class="br-lote">Lote 039</span><span class="br-venc">22/05</span><span class="br-qty">840g</span><span class="br-warn" style="color:#10B981">✓ ok</span></div>
+        </div>
+      </div>
+      <div class="feature-content">
+        <div class="feature-num">03 — Estoque com lotes</div>
+        <h3>Cada entrada vira lote com data de validade</h3>
+        <p>PEPS automático: o sistema dá baixa primeiro do lote mais antigo. Push no celular antes de vencer. Acabou perder produto que ninguém via na geladeira.</p>
+        <div class="feature-checks">
+          <span class="feature-check">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Controle por lote
+          </span>
+          <span class="feature-check">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            FIFO/PEPS automático
+          </span>
+          <span class="feature-check">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Alertas push no celular
+          </span>
+          <span class="feature-check">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Relatório de perdas
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 04 — NFe e Excel (reverse) -->
+    <div class="feature-row feat-reverse" data-aos="fade-up">
+      <div class="feature-visual-wrap">
+        <div class="feature-screen" aria-hidden="true">
+          <div class="feat-screen-title">Importação de NF-e</div>
+          <div class="nfe-line nfe-idle">
+            <span class="nfe-ico">📋</span>
+            <span>NF-e 35240683000189...</span>
+          </div>
+          <div class="nfe-line nfe-proc" style="margin-top:6px;">
+            <span class="nfe-ico">⏳</span>
+            <span>Processando XML — 24 produtos detectados</span>
+          </div>
+          <div class="nfe-line nfe-done" style="margin-top:6px;">
+            <span class="nfe-ico">✓</span>
+            <span>Importado em 12 segundos — estoque atualizado</span>
+          </div>
+          <div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,.06);font-size:0.625rem;color:#94A3B8;">
+            Também aceita: Excel · CSV · código de barras
+          </div>
+        </div>
+      </div>
+      <div class="feature-content">
+        <div class="feature-num">04 — Importação NF-e e Excel</div>
+        <h3>Sem digitar produto por produto</h3>
+        <p>Importe sua NF-e digitando os 44 dígitos ou fazendo upload do XML. Já tem planilha? Importe Excel/CSV no onboarding. Entrada no estoque em segundos.</p>
+        <div class="feature-checks">
+          <span class="feature-check">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Importação NF-e (XML ou chave de acesso)
+          </span>
+          <span class="feature-check">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Importação Excel / CSV
+          </span>
+          <span class="feature-check">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Scanner de código de barras
+          </span>
+          <span class="feature-check">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            50/mês no Essencial · ilimitado no Profissional
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how-section" id="como-funciona" aria-labelledby="how-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Em 1 hora</span>
+      <h2 class="section-title" id="how-heading">
+        Da inscrição ao primeiro relatório,
+        <span class="text-highlight">na mesma tarde.</span>
+      </h2>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="step-number" aria-hidden="true">01</div>
+        <h3>Cria sua conta · 5 minutos</h3>
+        <p>Sem cartão. Você cadastra email, senha e o tipo do seu negócio. Pronto para usar.</p>
+      </div>
+      <div class="step-card" data-aos="fade-up" data-aos-delay="120">
+        <div class="step-number" aria-hidden="true">02</div>
+        <h3>Marcos cadastra suas receitas · 45 minutos</h3>
+        <p>Eu mesmo ligo pra você e cadastro suas 10 receitas principais. Sem consultor terceirizado, sem manual.</p>
+      </div>
+      <div class="step-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="step-number" aria-hidden="true">03</div>
+        <h3>Use 5 minutos por dia · relatório toda sexta</h3>
+        <p>Registre entradas e sobras. Sexta-feira, relatório de margem + CMV chega no seu celular.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VERTICAIS ===== -->
+<section class="vertical-section" id="verticais" aria-labelledby="verticais-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Para quem é o Mize</span>
+      <h2 class="section-title" id="verticais-heading">
+        Mize serve a <span class="text-highlight">cozinhas diferentes</span>
+      </h2>
+      <p class="vertical-section-desc">Do artesanal ao industrial, o Mize adapta fichas técnicas, CMV e controle de lote para o jeito que a sua cozinha opera.</p>
+    </div>
+
+    <div class="vertical-grid">
+
+      <!-- Card 1 — Hamburguerias & Pizzarias (DESTAQUE) -->
+      <button class="vertical-card vertical-card-primary" data-vertical="hb-pizza"
+              aria-haspopup="dialog" data-aos="fade-up" data-aos-delay="0">
+        <div class="vertical-card-top">
+          <div class="vertical-icon vertical-icon-brand" aria-hidden="true">
+            <!-- burger / chef-hat SVG -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/>
+              <line x1="6" y1="17" x2="18" y2="17"/>
+            </svg>
+          </div>
+          <span class="vertical-badge">Foco principal</span>
+        </div>
+        <h3 class="vertical-card-title">Hamburguerias e Pizzarias</h3>
+        <p class="vertical-card-tagline">Artesanal, gourmet, 5–15 funcionários</p>
+        <p class="vertical-card-pain">"Saber quanto cada prato dá de margem, com queijo no preço de hoje"</p>
+        <p class="vertical-card-feature">
+          <svg class="check-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Margem por canal (salão / iFood / WhatsApp)
+        </p>
+        <span class="vertical-cta" aria-hidden="true">Saber mais →</span>
+      </button>
+
+      <!-- Card 2 — Dark Kitchens -->
+      <button class="vertical-card" data-vertical="dark-kitchen"
+              aria-haspopup="dialog" data-aos="fade-up" data-aos-delay="100">
+        <div class="vertical-card-top">
+          <div class="vertical-icon vertical-icon-purple" aria-hidden="true">
+            <!-- truck SVG (Lucide) -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" rx="2"/>
+              <path d="M16 8h4l3 5v3h-7V8z"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+        </div>
+        <h3 class="vertical-card-title">Dark Kitchens</h3>
+        <p class="vertical-card-tagline">100% delivery, 1+ marca por cozinha</p>
+        <p class="vertical-card-pain">"Saber qual marca operacional está sangrando margem"</p>
+        <p class="vertical-card-feature">
+          <svg class="check-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          CMV por marca + métricas por plataforma
+        </p>
+        <span class="vertical-cta" aria-hidden="true">Saber mais →</span>
+      </button>
+
+      <!-- Card 3 — Self-Service / Por Kg -->
+      <button class="vertical-card" data-vertical="self-service"
+              aria-haspopup="dialog" data-aos="fade-up" data-aos-delay="200">
+        <div class="vertical-card-top">
+          <div class="vertical-icon vertical-icon-green" aria-hidden="true">
+            <!-- scale SVG (Lucide) -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3v1"/>
+              <path d="M3 12h1m16 0h1"/>
+              <path d="m4.2 4.2.7.7m14-.7-.7.7"/>
+              <path d="M12 20H7a2 2 0 0 1-1.94-1.515L3 10h18l-2.06 8.485A2 2 0 0 1 17 20h-5z"/>
+              <path d="m7 10 2-6 3 2 3-2 2 6"/>
+            </svg>
+          </div>
+        </div>
+        <h3 class="vertical-card-title">Self-Service / Por Kg</h3>
+        <p class="vertical-card-tagline">Bufê, almoço por quilo, marmita</p>
+        <p class="vertical-card-pain">"Saber quanto custou o kg produzido vs o kg vendido"</p>
+        <p class="vertical-card-feature">
+          <svg class="check-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Produção em batch + controle de sobra de balcão
+        </p>
+        <span class="vertical-cta" aria-hidden="true">Saber mais →</span>
+      </button>
+
+      <!-- Card 4 — Padarias / Cafés -->
+      <button class="vertical-card" data-vertical="padaria"
+              aria-haspopup="dialog" data-aos="fade-up" data-aos-delay="300">
+        <div class="vertical-card-top">
+          <div class="vertical-icon vertical-icon-orange" aria-hidden="true">
+            <!-- coffee SVG (Lucide) -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+              <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/>
+              <line x1="6" y1="2" x2="6" y2="4"/>
+              <line x1="10" y1="2" x2="10" y2="4"/>
+              <line x1="14" y1="2" x2="14" y2="4"/>
+            </svg>
+          </div>
+        </div>
+        <h3 class="vertical-card-title">Padarias e Cafés</h3>
+        <p class="vertical-card-tagline">Pão artesanal, confeitaria, café especial</p>
+        <p class="vertical-card-pain">"Saber o custo real do pão francês com farinha no preço atual"</p>
+        <p class="vertical-card-feature">
+          <svg class="check-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Ficha técnica de produção (1kg farinha → N pães)
+        </p>
+        <span class="vertical-cta" aria-hidden="true">Saber mais →</span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="pricing-section" id="precos" aria-labelledby="pricing-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Preço transparente</span>
+      <h2 class="section-title" id="pricing-heading">
+        Você só paga depois de usar.
+        <span class="text-highlight">30 dias grátis.</span>
+      </h2>
+    </div>
+
+    <!-- Toggle mensal/anual -->
+    <div class="pricing-toggle" aria-label="Escolher período de cobrança">
+      <span class="toggle-label" id="label-monthly">Mensal</span>
+      <button class="toggle-btn" id="billingToggle" role="switch" aria-checked="false" aria-label="Alternar para plano anual">
+        <span class="toggle-knob"></span>
+      </button>
+      <span class="toggle-label" id="label-annual">
+        Anual
+        <span class="annual-pill">-20%</span>
+      </span>
+    </div>
+
+    <div class="pricing-grid" id="pricingGrid">
+
+      <!-- Plan: Essencial -->
+      <div class="plan-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="plan-name">Essencial</div>
+        <div class="plan-desc">Para começar com o pé direito</div>
+        <div class="plan-price">
+          <span class="p-currency">R$</span>
+          <span class="p-amount" data-monthly="49" data-annual="39">49</span>
+          <span class="p-period">/mês</span>
+        </div>
+        <ul class="plan-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>1 loja · até 500 insumos</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Controle de estoque completo</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Lotes e validade</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Fichas técnicas (até 10)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Importação NF-e (50/mês)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Suporte por e-mail</li>
+        </ul>
+        <a href="https://mizeapp.up.railway.app/login" target="_blank" rel="noopener noreferrer"
+           class="btn btn-outline btn-full">
+          Começar teste grátis
+        </a>
+      </div>
+
+      <!-- Plan: Profissional (featured) -->
+      <div class="plan-card plan-featured" data-aos="fade-up" data-aos-delay="100">
+        <div class="plan-badge">Mais escolhido</div>
+        <div class="plan-name">Profissional</div>
+        <div class="plan-desc">O favorito dos restaurantes 5-15 funcionários</div>
+        <div class="plan-price">
+          <span class="p-currency">R$</span>
+          <span class="p-amount" data-monthly="149" data-annual="119">149</span>
+          <span class="p-period">/mês</span>
+        </div>
+        <ul class="plan-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Até 3 lojas · insumos ilimitados</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Fichas técnicas ilimitadas</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>CMV em tempo real por canal</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Importação NF-e ilimitada</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Push em tempo real</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Múltiplos usuários</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Suporte direto comigo (WhatsApp)</li>
+        </ul>
+        <a href="https://mizeapp.up.railway.app/login" target="_blank" rel="noopener noreferrer"
+           class="btn btn-primary btn-full">
+          Começar teste grátis
+        </a>
+      </div>
+
+      <!-- Plan: Multi-Empresa -->
+      <div class="plan-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="plan-name">Multi-Empresa</div>
+        <div class="plan-desc">Para redes de restaurantes e franquias</div>
+        <div class="plan-price">
+          <span class="p-currency">R$</span>
+          <span class="p-amount" data-monthly="399" data-annual="319">399</span>
+          <span class="p-period">/mês</span>
+        </div>
+        <ul class="plan-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Lojas ilimitadas</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Tudo do Profissional</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Múltiplas empresas</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Relatórios consolidados</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Gerente de conta dedicado</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>SLA garantido</li>
+        </ul>
+        <a href="https://wa.me/5571999999999" target="_blank" rel="noopener noreferrer"
+           class="btn btn-outline btn-full">
+          Falar com o Marcos
+        </a>
+      </div>
+
+    </div>
+
+    <p class="pricing-note" data-aos="fade-up">
+      <span class="pn-check">✓</span>30 dias grátis&nbsp;&nbsp;
+      <span class="pn-check">✓</span>Sem cartão&nbsp;&nbsp;
+      <span class="pn-check">✓</span>Cancela em 1 clique
+    </p>
+
+    <div style="text-align:center;margin-top:20px;" data-aos="fade-up">
+      <a href="assinar.html" style="color:var(--brand);font-size:.9rem;font-weight:600;text-decoration:underline;text-underline-offset:3px;">
+        Ver comparativo completo dos planos →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOCIAL PROOF ===== -->
+<section class="social-proof-section" aria-labelledby="proof-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Quem já está usando</span>
+      <h2 class="section-title" id="proof-heading">Os primeiros restaurantes em piloto</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <!-- Placeholder 1 -->
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="testimonial-placeholder">
+          <div class="ph-avatar">Foto<br>aqui</div>
+          <div class="ph-line ph-short"></div>
+          <div class="ph-line ph-medium" style="margin-top:4px;"></div>
+          <div class="ph-line ph-long"   style="margin-top:12px;"></div>
+          <div class="ph-line ph-long"   style="margin-top:6px;"></div>
+          <div class="ph-line ph-medium" style="margin-top:6px;"></div>
+          <p style="margin-top:14px;font-size:.75rem;color:var(--gray-400);">Nome · Restaurante · Cidade</p>
+        </div>
+      </div>
+
+      <!-- Placeholder 2 -->
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-placeholder">
+          <div class="ph-avatar">Foto<br>aqui</div>
+          <div class="ph-line ph-short"></div>
+          <div class="ph-line ph-medium" style="margin-top:4px;"></div>
+          <div class="ph-line ph-long"   style="margin-top:12px;"></div>
+          <div class="ph-line ph-long"   style="margin-top:6px;"></div>
+          <div class="ph-line ph-medium" style="margin-top:6px;"></div>
+          <p style="margin-top:14px;font-size:.75rem;color:var(--gray-400);">Nome · Restaurante · Cidade</p>
+        </div>
+      </div>
+
+      <!-- Placeholder 3 -->
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-placeholder">
+          <div class="ph-avatar">Foto<br>aqui</div>
+          <div class="ph-line ph-short"></div>
+          <div class="ph-line ph-medium" style="margin-top:4px;"></div>
+          <div class="ph-line ph-long"   style="margin-top:12px;"></div>
+          <div class="ph-line ph-long"   style="margin-top:6px;"></div>
+          <div class="ph-line ph-medium" style="margin-top:6px;"></div>
+          <p style="margin-top:14px;font-size:.75rem;color:var(--gray-400);">Nome · Restaurante · Cidade</p>
+        </div>
+      </div>
+
+      <!-- Note -->
+      <div class="testimonial-note" data-aos="fade-up">
+        <strong>Em julho de 2026 publicamos aqui os primeiros depoimentos</strong> das 3 hamburguerias-piloto
+        que estão rodando o Mize desde maio. Quer fazer parte do piloto e travar preço de fundador?
+        Preencha o formulário no fim desta página e o Marcos entra em contato em até 24 horas.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOUNDER ===== -->
+<section class="founder-section" aria-labelledby="founder-heading">
+  <div class="container">
+    <div class="founder-inner" data-aos="fade-up">
+      <div class="founder-avatar" aria-label="Foto de perfil do Marcos">M</div>
+      <div>
+        <div class="founder-name" id="founder-heading">Marcos</div>
+        <div class="founder-role">Fundador do Mize</div>
+        <p class="founder-bio">
+          Construo o Mize porque cansei de ver dono de hamburgueria descobrir prejuízo só no fechamento do mês.
+          Atendo cada cliente pessoalmente nos primeiros 6 meses — instalação, treinamento, dúvidas no WhatsApp.
+          Se gostou daqui, me manda um oi.
+        </p>
+        <a href="https://wa.me/5571999999999" target="_blank" rel="noopener noreferrer" class="founder-wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+          </svg>
+          Falar com o Marcos no WhatsApp →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq-section" id="faq" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Perguntas reais das ligações</span>
+      <h2 class="section-title" id="faq-heading">O que perguntam antes de assinar</h2>
+    </div>
+
+    <div class="faq-list" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" aria-expanded="false">
+          Mize substitui meu PDV?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-body" aria-hidden="true">
+          <div class="faq-body-inner">
+            Não. Você continua com Stone, Cielo, Linx ou qualquer outro. Mize cuida da cozinha — ficha técnica, CMV, perdas e compras. Convivência tranquila.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" aria-expanded="false">
+          Integra com iFood?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-body" aria-hidden="true">
+          <div class="faq-body-inner">
+            Em construção, lançamento previsto para o terceiro trimestre de 2026. Hoje você registra as vendas de delivery uma vez ao dia, e o cálculo de CMV por canal já funciona.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" aria-expanded="false">
+          Já uso Conta Azul / Bling. Preciso trocar?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-body" aria-hidden="true">
+          <div class="faq-body-inner">
+            Não. Conta Azul cuida da contabilidade; Bling cuida do fiscal. Mize cuida da cozinha. Os três convivem sem conflito.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" aria-expanded="false">
+          Funciona em qualquer celular?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-body" aria-hidden="true">
+          <div class="faq-body-inner">
+            Sim. É um PWA — funciona no navegador do celular sem instalar nada. Você pode também adicionar à tela inicial em iPhone e Android.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" aria-expanded="false">
+          E se eu desistir?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-body" aria-hidden="true">
+          <div class="faq-body-inner">
+            Cancela com 1 clique no app. Exportamos seus dados em planilha pra você levar pra onde quiser. Sem multa, sem retenção.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" aria-expanded="false">
+          Quem é o Marcos?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-body" aria-hidden="true">
+          <div class="faq-body-inner">
+            Desenvolvedor solo construindo isso pessoalmente. Cada cliente é atendido por mim diretamente nos primeiros 6 meses. WhatsApp pessoal está no rodapé.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA FINAL ===== -->
+<section class="cta-final" id="cta-final" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="cta-badge">Comece hoje</div>
+    <h2 id="cta-heading">
+      Pronto pra saber a margem real
+      <span class="text-highlight">da sua cozinha?</span>
+    </h2>
+    <p class="cta-sub">Te ligo pessoalmente em até 24 horas. Sem robô.</p>
+
+    <form class="lead-form" id="leadForm" novalidate aria-label="Formulário de contato">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name" required />
+          <span class="field-error" id="err-nome" aria-live="polite">Por favor, informe seu nome.</span>
+        </div>
+        <div class="form-group">
+          <label for="restaurante">Nome do restaurante <span aria-hidden="true">*</span></label>
+          <input type="text" id="restaurante" name="restaurante" placeholder="Ex: Burguer do Zé" required />
+          <span class="field-error" id="err-restaurante" aria-live="polite">Por favor, informe o nome do restaurante.</span>
+        </div>
+        <div class="form-group">
+          <label for="cidade">Cidade <span aria-hidden="true">*</span></label>
+          <input type="text" id="cidade" name="cidade" placeholder="Ex: Salvador, BA" required />
+          <span class="field-error" id="err-cidade" aria-live="polite">Por favor, informe sua cidade.</span>
+        </div>
+        <div class="form-group">
+          <label for="tamanho">Tamanho do estabelecimento <span aria-hidden="true">*</span></label>
+          <select id="tamanho" name="tamanho" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="3-7">3 a 7 funcionários</option>
+            <option value="8-15">8 a 15 funcionários</option>
+            <option value="16+">16 ou mais</option>
+          </select>
+          <span class="field-error" id="err-tamanho" aria-live="polite">Por favor, selecione o tamanho.</span>
+        </div>
+        <div class="form-group" style="grid-column:1/-1">
+          <label for="whatsapp">WhatsApp <span aria-hidden="true">*</span></label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="(71) 99999-9999" autocomplete="tel" required />
+          <span class="field-error" id="err-whatsapp" aria-live="polite">Por favor, informe seu WhatsApp.</span>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-gradient btn-lg" id="formSubmitBtn">
+          Quero conversar com o Marcos
+        </button>
+      </div>
+
+      <div class="cta-trust">
+        <span class="cta-trust-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Sem cartão
+        </span>
+        <span class="cta-trust-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Sem fidelidade
+        </span>
+        <span class="cta-trust-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Cancela em 1 clique
+        </span>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer aria-label="Rodapé do site Mize">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="#inicio" class="nav-logo" aria-label="Mize — voltar ao topo">
+          <span class="nav-logo-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/>
+              <line x1="6" y1="17" x2="18" y2="17"/>
+            </svg>
+          </span>
+          Mize
+        </a>
+        <p class="footer-tagline">Gestão de cozinha que economiza margem.</p>
+      </div>
+
+      <!-- Produto -->
+      <div class="footer-col">
+        <h4>Produto</h4>
+        <ul>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#funcionalidades">Funcionalidades</a></li>
+          <li><a href="#precos">Preços</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Empresa -->
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#como-funciona">Sobre</a></li>
+          <li><a href="/privacidade.html">Política de Privacidade</a></li>
+          <li><a href="/termos.html">Termos de Uso</a></li>
+        </ul>
+      </div>
+
+      <!-- Contato -->
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li>
+            <a href="https://wa.me/5571999999999" target="_blank" rel="noopener noreferrer">
+              WhatsApp pessoal
+            </a>
+          </li>
+          <li>
+            <a href="mailto:marcos@mizeapp.com.br">
+              marcos@mizeapp.com.br
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/mize" target="_blank" rel="noopener noreferrer">
+              Instagram @mize
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Mize · CNPJ XX.XXX.XXX/0001-XX · Feito com café por um desenvolvedor solo na Bahia
+    </div>
+  </div>
+</footer>
+
+<!-- ===== VERTICAL DRAWERS ===== -->
+<div class="vertical-drawer-overlay" id="verticalDrawerOverlay" aria-hidden="true"></div>
+
+<!-- Drawer: Hamburguerias & Pizzarias -->
+<aside class="vertical-drawer" id="drawer-hb-pizza"
+       role="dialog" aria-modal="true"
+       aria-labelledby="drawer-hb-pizza-title" aria-hidden="true">
+  <div class="drawer-inner">
+    <div class="drawer-header">
+      <div class="drawer-header-icon vertical-icon-brand" aria-hidden="true">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/>
+          <line x1="6" y1="17" x2="18" y2="17"/>
+        </svg>
+      </div>
+      <div class="drawer-header-text">
+        <h2 class="drawer-title" id="drawer-hb-pizza-title">Hamburguerias e Pizzarias</h2>
+        <p class="drawer-tagline">Artesanal, gourmet, 5–15 funcionários</p>
+      </div>
+      <button class="drawer-close" aria-label="Fechar" data-close-drawer>&times;</button>
+    </div>
+    <div class="drawer-body">
+      <div class="drawer-pain">
+        <p class="drawer-pain-label">Dor principal</p>
+        <p>Saber quanto cada prato dá de margem, com queijo no preço de hoje</p>
+      </div>
+      <div class="drawer-features">
+        <h3>Como Mize resolve</h3>
+        <ul>
+          <li><svg class="check-svg check-green" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Ficha técnica viva com custo automático</li>
+          <li><svg class="check-svg check-green" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> CMV por canal (salão, iFood, WhatsApp)</li>
+          <li><svg class="check-svg check-green" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Lotes e validade com push 24h antes</li>
+          <li><svg class="check-svg check-green" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Importação NFe ilimitada</li>
+        </ul>
+      </div>
+      <div class="drawer-example">
+        <p class="drawer-example-label">Exemplo real</p>
+        <div class="drawer-example-card">
+          <span class="dex-name">X-Bacon</span>
+          <span class="dex-kpi">Margem real <strong>64%</strong></span>
+          <span class="dex-detail">Salão R$&nbsp;23 · iFood R$&nbsp;28</span>
+        </div>
+      </div>
+      <div class="drawer-pricing">
+        A partir de <strong>R$&nbsp;149/mês</strong> — Plano Profissional inclui todas as features acima
+      </div>
+      <div class="drawer-actions">
+        <a href="https://mizeapp.up.railway.app/login" target="_blank" rel="noopener noreferrer"
+           class="btn btn-green btn-full">Quero testar 30 dias grátis</a>
+        <a href="https://wa.me/5571999999999" target="_blank" rel="noopener noreferrer"
+           class="btn btn-outline btn-full">Falar com o Marcos</a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- Drawer: Dark Kitchens -->
+<aside class="vertical-drawer" id="drawer-dark-kitchen"
+       role="dialog" aria-modal="true"
+       aria-labelledby="drawer-dark-kitchen-title" aria-hidden="true">
+  <div class="drawer-inner">
+    <div class="drawer-header">
+      <div class="drawer-header-icon vertical-icon-purple" aria-hidden="true">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="3" width="15" height="13" rx="2"/>
+          <path d="M16 8h4l3 5v3h-7V8z"/>
+          <circle cx="5.5" cy="18.5" r="2.5"/>
+          <circle cx="18.5" cy="18.5" r="2.5"/>
+        </svg>
+      </div>
+      <div class="drawer-header-text">
+        <h2 class="drawer-title" id="drawer-dark-kitchen-title">Dark Kitchens</h2>
+        <p class="drawer-tagline">100% delivery, 1+ marca por cozinha</p>
+      </div>
+      <button class="drawer-close" aria-label="Fechar" data-close-drawer>&times;</button>
+    </div>
+    <div class="drawer-body">
+      <div class="drawer-pain">
+        <p class="drawer-pain-label">Dor principal</p>
+        <p>Saber qual marca operacional está sangrando margem</p>
+      </div>
+      <div class="drawer-features">
+        <h3>Como Mize resolve</h3>
+        <ul>
+          <li><svg class="check-svg check-green" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Múltiplas marcas em uma única cozinha</li>
+          <li><svg class="check-svg check-green" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> CMV por marca operacional</li>
+          <li><svg class="check-svg check-green" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Métricas por plataforma de delivery (iFood, Rappi, 99)</li>
+          <li><svg class="check-svg check-green" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Tempo médio de preparo por prato</li>
+        </ul>
+      </div>
+      <div class="drawer-example">
+        <p class="drawer-example-label">Exemplo real</p>
+        <div class="drawer-example-card">
+          <span class="dex-name">Marca Burger Lab</span>
+          <span class="dex-kpi">CMV <strong>38%</strong></span>
+          <span class="dex-detail">iFood 41% · Rappi 36%</span>
+        </div>
+      </div>
+      <div class="drawer-pricing">
+        A partir de <strong>R$&nbsp;149/mês</strong> — Plano Profissional inclui todas as features acima
+      </div>
+      <div class="drawer-actions">
+        <a href="https://mizeapp.up.railway.app/login" target="_blank" rel="noopener noreferrer"
+           class="btn btn-green btn-full">Quero testar 30 dias grátis</a>
+        <a href="https://wa.me/5571999999999" target="_blank" rel="noopener noreferrer"
+           class="btn btn-outline btn-full">Falar com o Marcos</a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- Drawer: Self-Service / Por Kg -->
+<aside class="vertical-drawer" id="drawer-self-service"
+       role="dialog" aria-modal="true"
+       aria-labelledby="drawer-self-service-title" aria-hidden="true">
+  <div class="drawer-inner">
+    <div class="drawer-header">
+      <div class="drawer-header-icon vertical-icon-green" aria-hidden="true">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3v1"/>
+          <path d="M3 12h1m16 0h1"/>
+          <path d="m4.2 4.2.7.7m14-.7-.7.7"/>
+          <path d="M12 20H7a2 2 0 0 1-1.94-1.515L3 10h18l-2.06 8.485A2 2 0 0 1 17 20h-5z"/>
+          <path d="m7 10 2-6 3 2 3-2 2 6"/>
+        </svg>
+      </div>
+      <div class="drawer-header-text">
+        <h2 class="drawer-title" id="drawer-self-service-title">Self-Service / Por Kg</h2>
+        <p class="drawer-tagline">Bufê, almoço por quilo, marmita</p>
+      </div>
+      <button class="drawer-close" aria-label="Fechar" data-close-drawer>&times;</button>
+    </div>
+    <div class="drawer-body">
+      <div class="drawer-pain">
+        <p class="drawer-pain-label">Dor principal</p>
+        <p>Saber quanto custou o kg produzido vs o kg vendido</p>
+      </div>
+      <div class="drawer-features">
+        <h3>Como Mize resolve</h3>
+        <ul>
+          <li><svg class="check-svg check-green" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Produção em batch (cadastra quanto produziu, não receita por porção)</li>
+          <li><svg class="check-svg check-green" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Custo por kg produzido vs vendido</li>
+          <li><svg class="check-svg check-green" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Controle de sobra de balcão por horário</li>
+          <li><svg class="check-svg check-green" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Lote e validade da gôndola</li>
+        </ul>
+      </div>
+      <div class="drawer-example">
+        <p class="drawer-example-label">Exemplo real</p>
+        <div class="drawer-example-card">
+          <span class="dex-name">Almoço de 4ª</span>
+          <span class="dex-kpi">Produzido <strong>38kg</strong> · Vendido <strong>31kg</strong></span>
+          <span class="dex-detail">Sobra R$&nbsp;420</span>
+        </div>
+      </div>
+      <div class="drawer-pricing">
+        A partir de <strong>R$&nbsp;149/mês</strong> — Plano Profissional inclui todas as features acima
+      </div>
+      <div class="drawer-actions">
+        <a href="https://mizeapp.up.railway.app/login" target="_blank" rel="noopener noreferrer"
+           class="btn btn-green btn-full">Quero testar 30 dias grátis</a>
+        <a href="https://wa.me/5571999999999" target="_blank" rel="noopener noreferrer"
+           class="btn btn-outline btn-full">Falar com o Marcos</a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- Drawer: Padarias e Cafés -->
+<aside class="vertical-drawer" id="drawer-padaria"
+       role="dialog" aria-modal="true"
+       aria-labelledby="drawer-padaria-title" aria-hidden="true">
+  <div class="drawer-inner">
+    <div class="drawer-header">
+      <div class="drawer-header-icon vertical-icon-orange" aria-hidden="true">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+          <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/>
+          <line x1="6" y1="2" x2="6" y2="4"/>
+          <line x1="10" y1="2" x2="10" y2="4"/>
+          <line x1="14" y1="2" x2="14" y2="4"/>
+        </svg>
+      </div>
+      <div class="drawer-header-text">
+        <h2 class="drawer-title" id="drawer-padaria-title">Padarias e Cafés</h2>
+        <p class="drawer-tagline">Pão artesanal, confeitaria, café especial</p>
+      </div>
+      <button class="drawer-close" aria-label="Fechar" data-close-drawer>&times;</button>
+    </div>
+    <div class="drawer-body">
+      <div class="drawer-pain">
+        <p class="drawer-pain-label">Dor principal</p>
+        <p>Saber o custo real do pão francês com farinha no preço atual</p>
+      </div>
+      <div class="drawer-features">
+        <h3>Como Mize resolve</h3>
+        <ul>
+          <li><svg class="check-svg check-green" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Ficha técnica de produção (1 receita → N unidades)</li>
+          <li><svg class="check-svg check-green" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Curva de consumo por dia da semana</li>
+          <li><svg class="check-svg check-green" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Lote com validade curta (push antes do vencimento)</li>
+          <li><svg class="check-svg check-green" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Sugestão de produção baseada em histórico</li>
+        </ul>
+      </div>
+      <div class="drawer-example">
+        <p class="drawer-example-label">Exemplo real</p>
+        <div class="drawer-example-card">
+          <span class="dex-name">Pão francês</span>
+          <span class="dex-kpi">1kg farinha → <strong>32 pães</strong></span>
+          <span class="dex-detail">Custo R$&nbsp;0,42/unid</span>
+        </div>
+      </div>
+      <div class="drawer-pricing">
+        A partir de <strong>R$&nbsp;149/mês</strong> — Plano Profissional inclui todas as features acima
+      </div>
+      <div class="drawer-actions">
+        <a href="https://mizeapp.up.railway.app/login" target="_blank" rel="noopener noreferrer"
+           class="btn btn-green btn-full">Quero testar 30 dias grátis</a>
+        <a href="https://wa.me/5571999999999" target="_blank" rel="noopener noreferrer"
+           class="btn btn-outline btn-full">Falar com o Marcos</a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Script -->
+<script src="script.js"></script>
+</body>
+</html>

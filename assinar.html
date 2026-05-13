@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Assine o Mize — escolha seu plano e comece a gerenciar CMV, fichas técnicas e estoque com 30 dias grátis, sem cartão." />
+  <meta name="robots" content="index, follow" />
+  <title>Planos e Preços — Mize</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Extras específicos de assinar.html */
+    .compare-table-wrap {
+      overflow-x: auto;
+      margin-top: 56px;
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      min-width: 640px;
+    }
+    .compare-table th {
+      background: var(--gray-100);
+      padding: 14px 18px;
+      font-weight: 700;
+      color: var(--gray-800);
+      text-align: left;
+      border-bottom: 2px solid var(--gray-200);
+    }
+    .compare-table th.th-featured {
+      background: rgba(37,99,235,.07);
+      color: var(--brand);
+    }
+    .compare-table td {
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--gray-200);
+      color: var(--gray-800);
+      vertical-align: middle;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table tr:hover td { background: var(--gray-50); }
+    .compare-table td.feat-name { font-weight: 500; color: var(--gray-800); }
+    .compare-table td.td-featured { background: rgba(37,99,235,.03); }
+    .check-yes { color: var(--green); font-weight: 700; font-size: 1rem; }
+    .check-no  { color: var(--gray-400); font-size: 1rem; }
+    .check-partial { color: var(--orange); font-size: 0.875rem; font-weight: 600; }
+
+    .assinar-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      margin-top: 14px;
+    }
+
+    .payment-info {
+      background: var(--gray-100);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin-top: 56px;
+    }
+    .payment-info h3 {
+      font-size: 1.125rem;
+      font-weight: 800;
+      color: var(--gray-800);
+      margin-bottom: 20px;
+    }
+    .payment-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 768px) {
+      .payment-steps { grid-template-columns: repeat(3, 1fr); }
+    }
+    .payment-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .ps-num {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--brand);
+      color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.875rem; font-weight: 800;
+      flex-shrink: 0;
+    }
+    .ps-text h4 { font-size: 0.9375rem; font-weight: 700; color: var(--gray-800); margin-bottom: 4px; }
+    .ps-text p  { font-size: 0.875rem;  color: var(--gray-600); line-height: 1.5; }
+
+    .faq-mini { max-width: 680px; margin: 0 auto; }
+
+    @media (min-width: 768px) {
+      .assinar-pricing-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header>
+  <nav class="navbar scrolled" id="navbar" aria-label="Navegação principal">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Mize — voltar ao início">
+        <span class="nav-logo-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/>
+            <line x1="6" y1="17" x2="18" y2="17"/>
+          </svg>
+        </span>
+        Mize
+      </a>
+
+      <div class="nav-links" aria-label="Links de navegação">
+        <a href="index.html#diferenciais">Diferenciais</a>
+        <a href="index.html#funcionalidades">Funcionalidades</a>
+        <a href="index.html#como-funciona">Como funciona</a>
+        <a href="#planos">Planos</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+
+      <a href="https://mizeapp.up.railway.app/login" target="_blank" rel="noopener noreferrer"
+         class="btn btn-green btn-sm nav-cta">
+        Entrar no app
+      </a>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
+    <button class="mobile-menu-close" id="closeMobileMenu" aria-label="Fechar menu">&times;</button>
+    <a href="index.html#diferenciais" class="mobile-nav-link">Diferenciais</a>
+    <a href="index.html#funcionalidades" class="mobile-nav-link">Funcionalidades</a>
+    <a href="index.html#como-funciona" class="mobile-nav-link">Como funciona</a>
+    <a href="#planos" class="mobile-nav-link">Planos</a>
+    <a href="index.html#faq" class="mobile-nav-link">FAQ</a>
+    <a href="https://mizeapp.up.railway.app/login" target="_blank" rel="noopener noreferrer"
+       class="btn btn-green btn-full">
+      Entrar no app
+    </a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ===== HERO DA PÁGINA ===== -->
+<section class="assinar-hero" aria-labelledby="assinar-heading">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:2">
+    <div class="hero-badge" style="margin-bottom:20px;display:inline-flex;">
+      <span class="pulse-dot" aria-hidden="true"></span>
+      30 dias grátis · sem cartão
+    </div>
+    <h1 id="assinar-heading">
+      Escolha seu plano e comece
+      <span class="text-highlight">ainda hoje.</span>
+    </h1>
+    <p>
+      Após escolher o plano, você acessa o Mize e conclui o pagamento com segurança via Mercado Pago.
+      Dúvidas? O Marcos te atende pessoalmente.
+    </p>
+  </div>
+</section>
+
+<!-- ===== COMO FUNCIONA O CHECKOUT ===== -->
+<section style="background:var(--white);padding:48px 0 0;" aria-label="Como funciona o processo de assinatura">
+  <div class="container">
+    <div class="payment-info" data-aos="fade-up">
+      <h3>Como funciona o processo de assinatura</h3>
+      <div class="payment-steps">
+        <div class="payment-step">
+          <div class="ps-num" aria-hidden="true">1</div>
+          <div class="ps-text">
+            <h4>Escolha seu plano abaixo</h4>
+            <p>Clique em "Assinar agora" no plano que desejar. Você será levado ao app Mize.</p>
+          </div>
+        </div>
+        <div class="payment-step">
+          <div class="ps-num" aria-hidden="true">2</div>
+          <div class="ps-text">
+            <h4>Crie sua conta ou faça login</h4>
+            <p>Acesse o Mize com seu e-mail. Conta nova? O Marcos cria pra você na ligação.</p>
+          </div>
+        </div>
+        <div class="payment-step">
+          <div class="ps-num" aria-hidden="true">3</div>
+          <div class="ps-text">
+            <h4>Pague com segurança via Mercado Pago</h4>
+            <p>Acesse "Assinaturas" no app, selecione o plano e finalize pelo Mercado Pago.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PLANOS ===== -->
+<section id="planos" style="background:var(--white);" aria-labelledby="planos-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Preço transparente</span>
+      <h2 class="section-title" id="planos-heading">
+        Você só paga depois de usar.
+        <span class="text-highlight">30 dias grátis.</span>
+      </h2>
+    </div>
+
+    <!-- Toggle mensal/anual -->
+    <div class="pricing-toggle" aria-label="Escolher período de cobrança">
+      <span class="toggle-label" id="label-monthly">Mensal</span>
+      <button class="toggle-btn" id="billingToggle" role="switch" aria-checked="false" aria-label="Alternar para plano anual">
+        <span class="toggle-knob"></span>
+      </button>
+      <span class="toggle-label" id="label-annual">
+        Anual
+        <span class="annual-pill">-20%</span>
+      </span>
+    </div>
+
+    <div class="pricing-grid assinar-pricing-grid" id="pricingGrid">
+
+      <!-- Essencial -->
+      <div class="plan-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="plan-name">Essencial</div>
+        <div class="plan-desc">Para começar com o pé direito</div>
+        <div class="plan-price">
+          <span class="p-currency">R$</span>
+          <span class="p-amount" data-monthly="49" data-annual="39">49</span>
+          <span class="p-period">/mês</span>
+        </div>
+        <p id="annual-note-basic" style="font-size:.8125rem;color:var(--gray-400);margin-bottom:18px;min-height:18px;"></p>
+        <ul class="plan-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>1 loja</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Até 500 insumos</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Controle de estoque completo</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Lotes e validade</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Fichas técnicas (até 10)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Importação NF-e (50/mês)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Relatórios em PDF</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Suporte por e-mail</li>
+        </ul>
+        <a href="https://mizeapp.up.railway.app/login"
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn-outline btn-full">
+          Assinar Essencial
+        </a>
+      </div>
+
+      <!-- Profissional (featured) -->
+      <div class="plan-card plan-featured" data-aos="fade-up" data-aos-delay="100">
+        <div class="plan-badge">Mais escolhido</div>
+        <div class="plan-name">Profissional</div>
+        <div class="plan-desc">O favorito dos restaurantes 5-15 funcionários</div>
+        <div class="plan-price">
+          <span class="p-currency">R$</span>
+          <span class="p-amount" data-monthly="149" data-annual="119">149</span>
+          <span class="p-period">/mês</span>
+        </div>
+        <p id="annual-note-pro" style="font-size:.8125rem;color:var(--gray-400);margin-bottom:18px;min-height:18px;"></p>
+        <ul class="plan-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Até 3 lojas</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Insumos ilimitados</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Tudo do Essencial</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Fichas técnicas ilimitadas</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>CMV em tempo real por canal</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Importação NF-e ilimitada</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Push em tempo real</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Múltiplos usuários</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Dashboard de desempenho</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Suporte direto comigo (WhatsApp)</li>
+        </ul>
+        <a href="https://mizeapp.up.railway.app/login"
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn-primary btn-full">
+          Assinar Profissional
+        </a>
+      </div>
+
+      <!-- Multi-Empresa -->
+      <div class="plan-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="plan-name">Multi-Empresa</div>
+        <div class="plan-desc">Para redes de restaurantes e franquias</div>
+        <div class="plan-price">
+          <span class="p-currency">R$</span>
+          <span class="p-amount" data-monthly="399" data-annual="319">399</span>
+          <span class="p-period">/mês</span>
+        </div>
+        <p id="annual-note-enterprise" style="font-size:.8125rem;color:var(--gray-400);margin-bottom:18px;min-height:18px;"></p>
+        <ul class="plan-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Lojas ilimitadas</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Múltiplas empresas</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Tudo do Profissional</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Perfis de acesso customizados</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Relatórios consolidados</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Gerente de conta dedicado</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>API de integração</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>SLA garantido</li>
+        </ul>
+        <a href="https://wa.me/5571999999999"
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn-outline btn-full">
+          Falar com o Marcos
+        </a>
+      </div>
+
+    </div>
+
+    <p class="pricing-note" data-aos="fade-up">
+      <span class="pn-check">✓</span>30 dias grátis&nbsp;&nbsp;
+      <span class="pn-check">✓</span>Sem cartão&nbsp;&nbsp;
+      <span class="pn-check">✓</span>Cancela em 1 clique&nbsp;&nbsp;
+      <span class="pn-check">✓</span>Pagamento seguro via Mercado Pago
+    </p>
+  </div>
+</section>
+
+<!-- ===== TABELA COMPARATIVA ===== -->
+<section style="background:var(--gray-50);padding-top:0;" aria-label="Comparativo detalhado dos planos">
+  <div class="container">
+    <h2 class="section-title" style="text-align:center;margin-bottom:8px;" data-aos="fade-up">
+      Comparativo detalhado
+    </h2>
+    <p style="text-align:center;color:var(--gray-600);margin-bottom:0;" data-aos="fade-up">Todos os planos incluem 30 dias grátis.</p>
+
+    <div class="compare-table-wrap" data-aos="fade-up">
+      <table class="compare-table" aria-label="Tabela comparativa dos planos Mize">
+        <thead>
+          <tr>
+            <th style="width:36%">Funcionalidade</th>
+            <th>Essencial<br><small style="font-weight:400;color:var(--gray-600)">R$&nbsp;49/mês</small></th>
+            <th class="th-featured">Profissional<br><small style="font-weight:400">R$&nbsp;149/mês</small></th>
+            <th>Multi-Empresa<br><small style="font-weight:400;color:var(--gray-600)">R$&nbsp;399/mês</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="feat-name">Número de lojas</td>
+            <td>1 loja</td>
+            <td class="td-featured">Até 3 lojas</td>
+            <td>Ilimitadas</td>
+          </tr>
+          <tr>
+            <td class="feat-name">Insumos</td>
+            <td>Até 500</td>
+            <td class="td-featured">Ilimitados</td>
+            <td>Ilimitados</td>
+          </tr>
+          <tr>
+            <td class="feat-name">Controle de estoque</td>
+            <td><span class="check-yes">✓</span></td>
+            <td class="td-featured"><span class="check-yes">✓</span></td>
+            <td><span class="check-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name">Lotes e validade</td>
+            <td><span class="check-yes">✓</span></td>
+            <td class="td-featured"><span class="check-yes">✓</span></td>
+            <td><span class="check-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name">Fichas técnicas</td>
+            <td>Até 10</td>
+            <td class="td-featured">Ilimitadas</td>
+            <td>Ilimitadas</td>
+          </tr>
+          <tr>
+            <td class="feat-name">CMV em tempo real</td>
+            <td><span class="check-no">—</span></td>
+            <td class="td-featured"><span class="check-yes">✓</span></td>
+            <td><span class="check-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name">CMV por canal (iFood, salão, WA)</td>
+            <td><span class="check-no">—</span></td>
+            <td class="td-featured"><span class="check-yes">✓</span></td>
+            <td><span class="check-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name">Importação NF-e</td>
+            <td><span class="check-partial">50/mês</span></td>
+            <td class="td-featured">Ilimitada</td>
+            <td>Ilimitada</td>
+          </tr>
+          <tr>
+            <td class="feat-name">Importação Excel / CSV</td>
+            <td><span class="check-yes">✓</span></td>
+            <td class="td-featured"><span class="check-yes">✓</span></td>
+            <td><span class="check-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name">Push em tempo real</td>
+            <td><span class="check-no">—</span></td>
+            <td class="td-featured"><span class="check-yes">✓</span></td>
+            <td><span class="check-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name">Múltiplos usuários</td>
+            <td><span class="check-no">—</span></td>
+            <td class="td-featured"><span class="check-yes">✓</span></td>
+            <td><span class="check-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name">Dashboard de desempenho</td>
+            <td><span class="check-no">—</span></td>
+            <td class="td-featured"><span class="check-yes">✓</span></td>
+            <td><span class="check-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name">Múltiplas empresas</td>
+            <td><span class="check-no">—</span></td>
+            <td class="td-featured"><span class="check-no">—</span></td>
+            <td><span class="check-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name">Relatórios consolidados</td>
+            <td><span class="check-no">—</span></td>
+            <td class="td-featured"><span class="check-no">—</span></td>
+            <td><span class="check-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name">Gerente de conta dedicado</td>
+            <td><span class="check-no">—</span></td>
+            <td class="td-featured"><span class="check-no">—</span></td>
+            <td><span class="check-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name">SLA garantido</td>
+            <td><span class="check-no">—</span></td>
+            <td class="td-featured"><span class="check-no">—</span></td>
+            <td><span class="check-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name">Suporte</td>
+            <td>E-mail</td>
+            <td class="td-featured">WhatsApp direto com o Marcos</td>
+            <td>Gerente dedicado</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <a href="https://mizeapp.up.railway.app/login" target="_blank" rel="noopener noreferrer"
+                 class="btn btn-outline btn-sm" style="margin-top:8px;">
+                Assinar
+              </a>
+            </td>
+            <td class="td-featured">
+              <a href="https://mizeapp.up.railway.app/login" target="_blank" rel="noopener noreferrer"
+                 class="btn btn-primary btn-sm" style="margin-top:8px;">
+                Assinar
+              </a>
+            </td>
+            <td>
+              <a href="https://wa.me/5571999999999" target="_blank" rel="noopener noreferrer"
+                 class="btn btn-outline btn-sm" style="margin-top:8px;">
+                Contato
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ RÁPIDO ===== -->
+<section style="background:var(--white);" aria-labelledby="faq-assinar-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Dúvidas</span>
+      <h2 class="section-title" id="faq-assinar-heading">Perguntas sobre assinatura</h2>
+    </div>
+
+    <div class="faq-list faq-mini">
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          Preciso de cartão para começar?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">Não. Os 30 dias de teste são completamente grátis, sem necessidade de informar cartão. O pagamento só começa depois que você decidir continuar.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          Como funciona o pagamento pelo Mercado Pago?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">Após clicar em "Assinar" dentro do app Mize, você é redirecionado para o Mercado Pago — a mesma plataforma usada por milhões de lojistas brasileiros. Aceita Pix, cartão de crédito e boleto.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          Posso mudar de plano depois?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">Sim. Basta acessar "Assinaturas" no app e escolher o novo plano. O Marcos também pode fazer isso pra você pelo WhatsApp.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          E se eu quiser cancelar?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">Cancela com 1 clique no app. Seus dados são exportados em planilha. Sem multa, sem retenção, sem e-mail de retenção.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA FINAL ===== -->
+<section class="cta-final" aria-labelledby="assinar-cta-heading">
+  <div class="container" style="text-align:center">
+    <div class="cta-badge">Ainda com dúvida?</div>
+    <h2 id="assinar-cta-heading">
+      Me manda um oi no WhatsApp.
+      <span class="text-highlight">Respondo pessoalmente.</span>
+    </h2>
+    <p class="cta-sub" style="margin-bottom:32px;">
+      Você fala diretamente comigo — sem chatbot, sem SAC, sem ticket.
+    </p>
+    <div class="assinar-cta-row">
+      <a href="https://wa.me/5571999999999" target="_blank" rel="noopener noreferrer"
+         class="btn btn-green btn-lg">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+        </svg>
+        Falar com o Marcos no WhatsApp
+      </a>
+      <a href="https://mizeapp.up.railway.app/login" target="_blank" rel="noopener noreferrer"
+         class="btn btn-ghost-white btn-lg">
+        Entrar no app Mize
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer aria-label="Rodapé">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="nav-logo-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/>
+              <line x1="6" y1="17" x2="18" y2="17"/>
+            </svg>
+          </span>
+          Mize
+        </a>
+        <p class="footer-tagline">Gestão de cozinha que economiza margem.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Produto</h4>
+        <ul>
+          <li><a href="index.html#diferenciais">Diferenciais</a></li>
+          <li><a href="index.html#funcionalidades">Funcionalidades</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="index.html#como-funciona">Sobre</a></li>
+          <li><a href="/privacidade.html">Privacidade</a></li>
+          <li><a href="/termos.html">Termos de Uso</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5571999999999" target="_blank" rel="noopener noreferrer">WhatsApp pessoal</a></li>
+          <li><a href="mailto:marcos@mizeapp.com.br">marcos@mizeapp.com.br</a></li>
+          <li><a href="https://instagram.com/mize" target="_blank" rel="noopener noreferrer">Instagram @mize</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Mize · CNPJ XX.XXX.XXX/0001-XX · Feito com café por um desenvolvedor solo na Bahia
+    </div>
+  </div>
+</footer>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Script -->
+<script src="script.js"></script>
+<script>
+  // Annual notes (assinar.html extras)
+  document.addEventListener('DOMContentLoaded', function () {
+    var toggleBtn = document.getElementById('billingToggle');
+    if (!toggleBtn) return;
+
+    var notes = [
+      { el: document.getElementById('annual-note-basic'),      monthly: 49,  annual: 39  },
+      { el: document.getElementById('annual-note-pro'),        monthly: 149, annual: 119 },
+      { el: document.getElementById('annual-note-enterprise'), monthly: 399, annual: 319 }
+    ];
+
+    function updateNotes(isAnnual) {
+      notes.forEach(function (n) {
+        if (!n.el) return;
+        if (isAnnual) {
+          var total = n.annual * 12;
+          n.el.textContent = 'R$ ' + total.toLocaleString('pt-BR') + '/ano (economize R$ ' + ((n.monthly - n.annual) * 12).toLocaleString('pt-BR') + ')';
+        } else {
+          n.el.textContent = '';
+        }
+      });
+    }
+
+    toggleBtn.addEventListener('click', function () {
+      var isAnnual = toggleBtn.getAttribute('aria-checked') === 'true';
+      updateNotes(isAnnual);
+    });
+  });
+</script>
+</body>
+</html>
